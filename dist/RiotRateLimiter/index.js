@@ -50,6 +50,7 @@ class RiotRateLimiter {
                 url: url,
                 method: 'GET',
                 headers: { 'X-Riot-Token': token },
+                gzip: true,
                 resolveWithFullResponse,
                 transform: (body, response, resolveWithFullResponse) => {
                     let updatedLimits = [];
